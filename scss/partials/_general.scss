@@ -14,13 +14,9 @@ body {
 }
 
 .container.text-center {
-    height: 100vh;
+    // height: 100vh;
     @include flexCenter;
-}
-
-.container {
-    outline: 1px solid red;
-
+    margin-top: 2rem;
 }
 
 h1 {
@@ -45,6 +41,7 @@ p {
 }
 
 li {
+    margin: 0 auto;
     max-width: 350px;
     text-align: left;
     padding: 2rem;
@@ -72,9 +69,30 @@ li {
     }
 }
 
-@media(min-width:1200px) {
+@media(min-width:768px) {
+
+    .container.text-center {
+        margin-top: 0;
+        height: 100vh;
+    }
 
     .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        >* {
+            width: 47%;
+        }
+    }
+}
+
+@media(min-width:1200px) {
+
+
+    .list {
+        display: block;
+
         li:nth-child(1) {
             position: absolute;
             top: 0;
