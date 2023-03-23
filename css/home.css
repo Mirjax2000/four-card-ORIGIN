@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;600&display=swap");
 :root {
   --h1-fs:1.75rem;
   --par-fs:0.9375rem;
@@ -18,68 +18,101 @@ html ::selection {
 
 body {
   background-color: #fafafb;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 400;
-  opacity: 0.8;
-}
-
-h2 {
-  font-size: 2.1rem;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  opacity: 0.6;
-}
-
-.row {
-  gap: 1rem;
+.container.text-center {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.row > * {
-  padding: 0;
+.container {
+  outline: 1px solid red;
+}
+
+h1 {
+  font-size: 2.375rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+h2 {
+  font-size: 2.375rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+p {
+  opacity: 0.8;
+  max-width: 470px;
 }
 
 li {
+  max-width: 350px;
   text-align: left;
+  padding: 2rem;
   background-color: #fff;
+  margin-bottom: 2rem;
   -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.216);
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.216);
-  border-radius: 6px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-radius: 5px;
 }
 
-.border {
-  width: 100%;
-  height: 5px;
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
+.list li:nth-child(1) {
+  border-top: 5px solid rgb(0, 255, 238);
+}
+.list li:nth-child(2) {
+  border-top: 5px solid red;
+}
+.list li:nth-child(3) {
+  border-top: 5px solid orange;
+}
+.list li:nth-child(4) {
+  border-top: 5px solid rgb(0, 110, 255);
 }
 
-.green {
-  background-color: rgb(0, 255, 204);
+@media (min-width: 1200px) {
+  .list li:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  .list li:nth-child(4) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
 }
-
-.red {
-  background-color: red;
-}
-
-.yellow {
-  background-color: orange;
-}
-
-.blue {
-  background-color: rgb(0, 157, 255);
+@media (min-width: 1400px) {
+  .list li:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(25%, 50%);
+            transform: translate(25%, 50%);
+  }
+  .list li:nth-child(4) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(-25%, 50%);
+            transform: translate(-25%, 50%);
+  }
 }
 /*# sourceMappingURL=home.css.map */
